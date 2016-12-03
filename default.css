@@ -1,0 +1,17 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	font-size: 120%;
+	color: white;
+}
+
+table {
+	margin: auto;
+}
+
+img {
+	width: 320px;
+	height: 240px;
+}
