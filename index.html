@@ -8,7 +8,8 @@
     <h1>webcam-gallery</h1>
     <table>
       <tr>
-        <td><img src="http://83.56.31.69/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>
+        <td><div id="container"><video autoplay="true" id="videoElement"/></div></td>
+        <!--<td><img src="http://83.56.31.69/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>-->
         <td><img src="http://75.151.65.9/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>
         <td><img src="http://75.149.45.190/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>
         <td><img src="http://97.90.177.154:83/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>
@@ -19,5 +20,21 @@
         <td><img src="http://73.203.51.130:8084/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>
         <td><img src="http://88.190.98.55/mjpg/video.mjpg?COUNTER" alt="webcam"/></td>
       </tr>
+      <script>
+        var video = document.querySelector("#videoElement");
+	
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+	
+	if (navigator.getUserMedia) {       
+		    navigator.getUserMedia({video: true}, handleVideo, videoError);
+	}
+	 
+	function handleVideo(stream) {
+		     video.src = window.URL.createObjectURL(stream);
+	}
+	  
+	function videoError(e) {
+	}
+      </script>
   </body>
 </html>

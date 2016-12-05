@@ -11,7 +11,18 @@ table {
 	margin: auto;
 }
 
+td {
+	padding: 0;
+}
+
 img {
 	width: 320px;
 	height: 240px;
+}
+
+#container, video {
+	width: 320px;
+	height: 240px;
+	padding: 0;
+	margin: 0;
 }
