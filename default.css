@@ -5,6 +5,9 @@ body {
 h1 {
 	font-size: 120%;
 	color: white;
+	text-align: center;
+	letter-spacing: 6px;
+	font-weight: normal;
 }
 
 table {
